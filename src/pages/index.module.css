@@ -1,0 +1,37 @@
+.mainContainer {
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lollyContainer {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.input input {
+  margin-bottom: 30px;
+  border: none;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+}
+
+.input input:focus {
+  outline: none;
+}

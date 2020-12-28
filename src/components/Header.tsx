@@ -1,12 +1,11 @@
 import React from "react";
-
+import styles from "./Header.module.css";
 const Header = () => {
   return (
-    <div>
-      <h1>{"Yellowtail,cursive"}Virtual Lollipop</h1>
-      <h2>
-        {"sans,Helvetica,sans-serif"}Because We All Know Someone Who Deserves
-        SWEET
+    <div className={styles.container}>
+      <h1 className={styles.headTitle}>Virtual Lollipop</h1>
+      <h2 className={styles.subTitle}>
+        Because We All Know Someone Who Deserves SWEET
       </h2>
     </div>
   );
