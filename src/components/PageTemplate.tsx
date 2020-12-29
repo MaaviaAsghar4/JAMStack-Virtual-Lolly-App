@@ -12,15 +12,17 @@ process.env.NODE_ENV === "development"
   : (url = "https://maaviasghar-vlolly.netlify.app");
 
 const LINK_QUERY = gql`
-      queryLollyByLink(linkID:$linkID){
-        topColor
-        middleColor
-        bottomColor
-        senderName
-        message
-        recieverName
-        linkID
-      }
+  query queryLollyByLink($linkID: String!) {
+    queryLollyByLink(linkID: $linkID) {
+      topColor
+      middleColor
+      bottomColor
+      senderName
+      message
+      recieverName
+      linkID
+    }
+  }
 `;
 
 const PageTemplate = ({ pageContext }) => {

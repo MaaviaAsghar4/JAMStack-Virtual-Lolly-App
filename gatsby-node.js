@@ -12,8 +12,6 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `);
 
-  console.log(JSON.stringify(result));
-
   result.data.getlolly.queryVlolly.forEach(({ linkID }) => {
     createPage({
       path: `/lolly/${linkID}`,
