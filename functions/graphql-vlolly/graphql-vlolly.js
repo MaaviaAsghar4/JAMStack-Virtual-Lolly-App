@@ -7,7 +7,7 @@ dotenv.config();
 const typeDefs = gql`
   type Query {
     queryVlolly: [Vlolly]!
-    queryLollyByLink(linkID: String!): Lolly
+    queryLollyByLink(linkID: String!): Vlolly
   }
   type Mutation {
     addVlolly(
@@ -21,7 +21,6 @@ const typeDefs = gql`
     ): Vlolly
   }
   type Vlolly {
-    id: ID!
     topColor: String!
     middleColor: String!
     bottomColor: String!
@@ -51,7 +50,6 @@ const resolvers = {
 
         return result.data.map((value) => {
           return {
-            id: value.ref.id,
             topColor: value.data.topColor,
             middleColor: value.data.middleColor,
             bottomColor: value.data.bottomColor,
@@ -75,16 +73,7 @@ const resolvers = {
           q.Get(q.Match(q.Index("Lolly_by_link"), linkID))
         );
 
-        return {
-          id: result.ref.id,
-          topColor: result.ref.data.topColor,
-          middleColor: result.ref.data.middleColor,
-          bottomColor: result.ref.data.bottomColor,
-          senderName: result.ref.data.senderName,
-          message: result.ref.data.message,
-          recieverName: result.ref.data.recieverName,
-          linkID: result.ref.data.linkID,
-        };
+        return result.data;
       } catch (error) {
         console.log(error.message);
       }
@@ -134,7 +123,6 @@ const resolvers = {
 
         console.log(result);
         return {
-          id: result.ref.id,
           topColor: result.ref.data.topColor,
           middleColor: result.ref.data.middleColor,
           bottomColor: result.ref.data.bottomColor,

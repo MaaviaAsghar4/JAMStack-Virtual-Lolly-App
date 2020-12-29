@@ -1,8 +1,9 @@
 let url;
-
-process.env.NODE_ENV === "development"
-  ? (url = "http://localhost:8888")
-  : (url = "https://maaviasghar-vlolly.netlify.app");
+if (process.env.NODE_ENV === "development") {
+  url = "http://localhost:8888";
+} else {
+  url = "https://maaviasghar-vlolly.netlify.app/";
+}
 
 module.exports = {
   plugins: [
