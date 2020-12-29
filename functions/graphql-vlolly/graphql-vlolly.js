@@ -7,7 +7,7 @@ dotenv.config();
 const typeDefs = gql`
   type Query {
     queryVlolly: [Vlolly]!
-    queryLollyByLink(linkID: String!): Lolly 
+    queryLollyByLink(linkID: String!): Lolly
   }
   type Mutation {
     addVlolly(
@@ -63,9 +63,9 @@ const resolvers = {
         });
       } catch (error) {
         console.log(error.message);
-      } 
+      }
     },
-    queryLollyByLink: async (_,{linkID})=>{
+    queryLollyByLink: async (_, { linkID }) => {
       try {
         const adminClient = new faundadb.Client({
           secret: process.env.FAUNA_DB_SECRET_KEY,
@@ -74,7 +74,7 @@ const resolvers = {
         const result = await adminClient.query(
           q.Get(q.Match(q.Index("Lolly_by_link"), linkID))
         );
-        
+
         return {
           id: result.ref.id,
           topColor: result.ref.data.topColor,
@@ -86,7 +86,7 @@ const resolvers = {
           linkID: result.ref.data.linkID,
         };
       } catch (error) {
-        console.log(error.message)
+        console.log(error.message);
       }
     },
   },
@@ -124,13 +124,13 @@ const resolvers = {
         );
 
         axios
-        .post("https://api.netlify.com/build_hooks/5feb08289463200fbd72883c")
-        .then(function (response) {
-          console.log(response)
-        })
-        .catch(function (error) {
-          console.error(error)
-        })
+          .post("https://api.netlify.com/build_hooks/5feb08289463200fbd72883c")
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.error(error);
+          });
 
         console.log(result);
         return {
@@ -153,6 +153,8 @@ const resolvers = {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  playground: true,
+  introspection: true,
 });
 
 exports.handler = server.createHandler();
