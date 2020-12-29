@@ -1,3 +1,9 @@
+let url;
+
+process.env.NODE_ENV === "development"
+  ? (url = "https://localhost:8888")
+  : (url = "https://maaviasghar-vlolly.netlify.app");
+
 module.exports = {
   plugins: [
     "gatsby-plugin-typescript",
@@ -6,7 +12,7 @@ module.exports = {
       options: {
         typeName: "LOLLY",
         fieldName: "getlolly",
-        url: "https://maaviasghar-vlolly.netlify.app/.netlify/functions/graphql-vlolly",
+        url: `${url}/.netlify/functions/graphql-vlolly`,
       },
     },
   ],
