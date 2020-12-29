@@ -1,5 +1,5 @@
 {
-  "include": ["./src/**/*"],
+  "include": ["./src/**/*", "stories"],
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",

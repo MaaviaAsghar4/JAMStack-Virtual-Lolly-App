@@ -39,6 +39,7 @@ const ADD_LOLLY = gql`
 `;
 
 const IndexPage = () => {
+  const id = shortid.generate();
   let [topColor, setTopColor] = useState("#fa73d9");
   let [middleColor, setMiddleColor] = useState("#e55945");
   let [bottomColor, setBottomColor] = useState("#ddaa43");
@@ -50,7 +51,6 @@ const IndexPage = () => {
     recieverName: string
   ) => {
     console.log(senderName, message, recieverName);
-    const id = shortid.generate();
     const generatePage = async () => {
       const result = await addVlolly({
         variables: {
@@ -66,10 +66,12 @@ const IndexPage = () => {
     };
 
     generatePage();
-
-    navigate(`/lolly/${id}`);
   };
-
+  
+  
+  if(data){
+    navigate(`/lolly/${id}`);
+  }
   return (
     <div className={styles.container}>
       <Layout>

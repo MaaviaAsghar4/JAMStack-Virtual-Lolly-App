@@ -1,0 +1,18 @@
+{
+  "name": "graphql-vlolly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "graphql-vlolly.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-lambda": "^2.19.1",
+    "axios": "^0.21.1",
+    "faunadb": "^4.0.0",
+    "graphql": "^15.4.0"
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-interface LollyProp {
+export interface LollyProp {
   top: string;
   middle: string;
   bottom: string;

@@ -6,7 +6,7 @@ module.exports = {
       options: {
         typeName: "LOLLY",
         fieldName: "getlolly",
-        url: "http://localhost:8888/.netlify/functions/graphql-vlolly",
+        url: "https://maaviasghar-vlolly.netlify.app/.netlify/functions/graphql-vlolly",
       },
     },
   ],
