@@ -14,8 +14,6 @@ module.exports = {
         typeName: "LOLLY",
         fieldName: "getlolly",
         url: `${url}/.netlify/functions/graphql-vlolly`,
-        forceFullSync: true,
-        refetchInterval: 3,
       },
     },
   ],

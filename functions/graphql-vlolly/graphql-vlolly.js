@@ -1,6 +1,7 @@
 const { ApolloServer, gql } = require("apollo-server-lambda");
 const faundadb = require("faunadb");
 const q = faundadb.query;
+const axios = require("axios");
 const dotenv = require("dotenv");
 dotenv.config();
 
