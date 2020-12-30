@@ -10,7 +10,7 @@ let url: string;
 
 process.env.NODE_ENV === "development"
   ? (url = "https://localhost:8888")
-  : (url = "https://maaviasghar-vlolly.netlify.app/");
+  : (url = "https://maaviasghar-vlolly.netlify.app");
 
 // const LINK_QUERY = gql`
 //   query queryLollyByLink($linkID: String!) {
@@ -59,6 +59,9 @@ const PageTemplate = ({
   //   <h1>{error.message}</h1>;
   // }
   // console.log(data);
+  if (!queryLollyByLink) {
+    return <h1 style={{ color: "#f7f7f7" }}>Loading...</h1>;
+  }
   return (
     <div className={styles.container}>
       <Layout>
