@@ -9,7 +9,7 @@ import styles from "./PageTemplate.module.css";
 let url: string;
 
 process.env.NODE_ENV === "development"
-  ? (url = "https://localhost:8888")
+  ? (url = "http://localhost:8888")
   : (url = "https://maaviasghar-vlolly.netlify.app");
 
 // const LINK_QUERY = gql`

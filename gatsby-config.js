@@ -1,9 +1,9 @@
-let url;
-if (process.env.NODE_ENV === "development") {
-  url = "http://localhost:8888";
-} else {
-  url = "https://maaviasghar-vlolly.netlify.app";
-}
+// let url;
+// if (process.env.NODE_ENV === "development") {
+//   url = "http://localhost:8888";
+// } else {
+//   url = "https://maaviasghar-vlolly.netlify.app";
+// }
 
 module.exports = {
   plugins: [
@@ -13,7 +13,7 @@ module.exports = {
       options: {
         typeName: "LOLLY",
         fieldName: "getlolly",
-        url: `${url}/.netlify/functions/graphql-vlolly`,
+        url: `https://maaviasghar-vlolly.netlify.app/.netlify/functions/graphql-vlolly`,
       },
     },
   ],

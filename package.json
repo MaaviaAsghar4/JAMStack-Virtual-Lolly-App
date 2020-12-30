@@ -30,6 +30,7 @@
     "dotenv": "^8.2.0",
     "formik": "^2.2.6",
     "gatsby": "^2.26.1",
+    "gatsby-plugin-apollo": "^3.0.2",
     "gatsby-plugin-typescript": "^2.9.0",
     "gatsby-source-graphql": "^2.11.0",
     "react": "^16.13.1",

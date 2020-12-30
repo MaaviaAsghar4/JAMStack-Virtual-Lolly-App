@@ -1,4 +1,6 @@
 [build]
   command = "npm run build && cd functions/graphql-vlolly && npm install"
-  functions = "functions"
-  publish = "public"
+  publish = "public/"
+  functions = "functions/"
+[[plugins]]
+package = "@netlify/plugin-functions-install-core"
