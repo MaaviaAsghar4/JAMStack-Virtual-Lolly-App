@@ -25,8 +25,7 @@ const Lollies = ({ location: { state } }) => {
   //     return <h1 style={{ color: "#f7f7f7" }}>Loading...</h1>;
   //   }
   console.log(state);
-  const { id } = state;
-  const linkID = id;
+  const linkID = state.id;
   const { loading, error, data } = useQuery(GET_QUERY, {
     variables: { linkID },
   });
