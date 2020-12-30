@@ -17,9 +17,6 @@
     "build-storybook": "build-storybook"
   },
   "license": "0BSD",
-  "resolutions": {
-    "graphql": "^14.5.8"
-  },
   "dependencies": {
     "@apollo/client": "^3.3.6",
     "@typescript-eslint/eslint-plugin": "^4.11.0",
