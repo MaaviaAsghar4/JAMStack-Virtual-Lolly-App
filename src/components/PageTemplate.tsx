@@ -10,7 +10,7 @@ let url: string;
 
 process.env.NODE_ENV === "development"
   ? (url = "https://localhost:8888")
-  : (url = "https://maaviasghar-vlolly.netlify.app");
+  : (url = "https://maaviasghar-vlolly.netlify.app/");
 
 // const LINK_QUERY = gql`
 //   query queryLollyByLink($linkID: String!) {

@@ -2,7 +2,7 @@ let url;
 if (process.env.NODE_ENV === "development") {
   url = "http://localhost:8888";
 } else {
-  url = "https://maaviasghar-vlolly.netlify.app/";
+  url = "https://maaviasghar-vlolly.netlify.app";
 }
 
 module.exports = {
