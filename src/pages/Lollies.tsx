@@ -24,8 +24,7 @@ const Lollies = ({ location: { state } }) => {
   //   if (!queryLollyByLink) {
   //     return <h1 style={{ color: "#f7f7f7" }}>Loading...</h1>;
   //   }
-  console.log(state);
-  const linkID = state.id;
+  const linkID = state ? state.id : "";
   const { loading, error, data } = useQuery(GET_QUERY, {
     variables: { linkID },
   });
