@@ -45,7 +45,7 @@ const PageTemplate = ({
               href={`https://maaviasghar-vlolly.netlify.app/lolly/${queryLollyByLink.linkID}`}
               target="_blank"
               className={styles.link}
-            >{`${url}/lolly/${queryLollyByLink.linkID}`}</a>
+            >{`https://maaviasghar-vlolly.netlify.app/lolly/${queryLollyByLink.linkID}`}</a>
             <h2
               className={styles.sender}
             >{`${queryLollyByLink.senderName}___`}</h2>
