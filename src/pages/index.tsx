@@ -67,7 +67,7 @@ const IndexPage = () => {
       console.log(result);
 
       setTimeout(async () => {
-        await navigate(`/lolly/${id}`);
+        await navigate(`/Lollies`, { state: { id: id } });
       }, 3000);
     };
 
