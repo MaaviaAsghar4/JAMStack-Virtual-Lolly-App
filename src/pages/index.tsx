@@ -66,7 +66,9 @@ const IndexPage = () => {
 
       console.log(result);
 
-      await navigate(`/lolly/${id}`);
+      setTimeout(async () => {
+        await navigate(`/lolly/${id}`);
+      }, 3000);
     };
 
     generatePage();

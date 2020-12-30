@@ -1,30 +1,8 @@
 import React from "react";
 import Layout from "./Layout";
 import Lolly from "./Lolly";
-// import { useQuery } from "@apollo/client";
 import { graphql } from "gatsby";
-// import gql from "graphql-tag";
 import styles from "./PageTemplate.module.css";
-
-let url: string;
-
-process.env.NODE_ENV === "development"
-  ? (url = "http://localhost:8888")
-  : (url = "https://maaviasghar-vlolly.netlify.app");
-
-// const LINK_QUERY = gql`
-//   query queryLollyByLink($linkID: String!) {
-//     queryLollyByLink(linkID: $linkID) {
-//       topColor
-//       middleColor
-//       bottomColor
-//       senderName
-//       message
-//       recieverName
-//       linkID
-//     }
-//   }
-// `;
 
 export const query = graphql`
   query MyQuery($linkID: String!) {
@@ -47,18 +25,6 @@ const PageTemplate = ({
     getlolly: { queryLollyByLink },
   },
 }) => {
-  // const { loading, error, data } = useQuery(LINK_QUERY, {
-  //   variables: { linkID: pageContext.linkID },
-  // });
-
-  // if (loading) {
-  //   <h1>Loading..</h1>;
-  // }
-
-  // if (error) {
-  //   <h1>{error.message}</h1>;
-  // }
-  // console.log(data);
   if (!queryLollyByLink) {
     return <h1 style={{ color: "#f7f7f7" }}>Loading...</h1>;
   }
@@ -76,7 +42,7 @@ const PageTemplate = ({
           </div>
           <div className={styles.messageContainer}>
             <a
-              href={`${url}/lolly/${queryLollyByLink.linkID}`}
+              href={`https://maaviasghar-vlolly.netlify.app/lolly/${queryLollyByLink.linkID}`}
               target="_blank"
               className={styles.link}
             >{`${url}/lolly/${queryLollyByLink.linkID}`}</a>
