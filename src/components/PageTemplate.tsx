@@ -26,21 +26,21 @@ process.env.NODE_ENV === "development"
 //   }
 // `;
 
-// export const query = graphql`
-//   query MyQuery($linkID: String!) {
-//     getlolly {
-//       queryLollyByLink(linkID: $linkID) {
-//         topColor
-//         middleColor
-//         bottomColor
-//         senderName
-//         message
-//         recieverName
-//         linkID
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  query MyQuery($linkID: String!) {
+    getlolly {
+      queryLollyByLink(linkID: $linkID) {
+        topColor
+        middleColor
+        bottomColor
+        senderName
+        message
+        recieverName
+        linkID
+      }
+    }
+  }
+`;
 
 const PageTemplate = ({
   data: {
