@@ -1,4 +1,4 @@
 [build]
-  command = "yarn build && cd functions/graphql-vlolly && yarn install"
+  command = "npm run build && cd functions/graphql-vlolly && npm install"
   functions = "functions"
   publish = "public"
